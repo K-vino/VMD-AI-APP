@@ -1,8 +1,8 @@
 import streamlit as st
 
 st.title('WECOME TO MY AI WORLD')
-st.logo("linked.png")
 st.header('I am Vino k')
+st.image("./vino.jpeg")
 st.header('"Try my VMD AI..."')
 
 import google.generativeai as genai
@@ -14,5 +14,4 @@ chat = model.start_chat(history=[])
 if st.button("CLICK HERE"):
     response = chat.send_message(text)
     st.write(response.text)
-    
  
