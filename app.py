@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title('WECOME TO MY AI WORLD')
 st.header('I am Vino k')
-st.image("./vino.jpeg")
+st.image("./vino.png")
 st.header('"Try my VMD AI..."')
 
 import google.generativeai as genai
