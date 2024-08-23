@@ -46,4 +46,27 @@ if st.button("Generate Image"):
         st.image(image, caption='Generated Image')
     else:
         st.warning('Please enter a prompt before clicking "Generate Image".')
+
+import streamlit as st
+from gtts import gTTS
+from io import BytesIO
+
+st.title("Text to Audio Converter")
+
+
+user_input = st.text_input("Enter text:")
+
+if st.button("Generate Audio"):
+    if user_input:
+
+        tts = gTTS(text=user_input, lang='en')
+        audio_bytes = BytesIO()
+        tts.write_to_fp(audio_bytes)
+        audio_bytes.seek(0)  
+
+       
+        st.audio(audio_bytes, format='audio/mp3')
+    else:
+        st.error("Please enter some text.")
+
  
