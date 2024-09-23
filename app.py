@@ -20,7 +20,7 @@ import streamlit as st
 import io
 from PIL import Image
 
-# Define API URL and headers
+# Define API URL and headers .
 API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
 headers = {"Authorization": "Bearer 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"}
 
